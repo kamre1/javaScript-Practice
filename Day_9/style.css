@@ -1,0 +1,50 @@
+/* Global reset for all elements to remove default margin, padding, and box-sizing */
+* {
+    margin: 0; /* Margin ko reset kiya gaya hai */
+    padding: 0; /* Padding ko reset kiya gaya hai */
+    box-sizing: border-box; /* Box-sizing ko set kiya gaya hai border-box */
+    font-family: Gilroy; /* Default font family set kiya gaya hai (Gilroy) */
+}
+
+/* HTML aur body elements ko full viewport height aur width par set kiya gaya hai */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Body element ki styling */
+body {
+    background-color: lightseagreen; /* Background color set kiya gaya hai (lightseagreen) */
+    display: flex; /* Flex layout ka istemal kiya gaya hai */
+    align-items: center; /* Items ko vertically center par align kiya gaya hai */
+    justify-content: center; /* Items ko horizontally center par align kiya gaya hai */
+}
+
+/* #container element ki styling */
+#container {
+    height: 400px; /* Height set kiya gaya hai (400px) */
+    width: 350px; /* Width set kiya gaya hai (350px) */
+    position: relative; /* Position set kiya gaya hai relative */
+    border-radius: 10px; /* Border radius set kiya gaya hai (10px) */
+    background-color: white; /* Background color set kiya gaya hai (white) */
+    overflow: hidden; /* Overflow ko hidden kiya gaya hai (image ke liye) */
+}
+
+/* #container ke image element ki styling */
+#container img {
+    height: 100%; /* Height set kiya gaya hai 100% (container ke liye fit) */
+    width: 100%; /* Width set kiya gaya hai 100% (container ke liye fit) */
+    object-fit: cover; /* Image ko cover karne ke liye object-fit ka istemal kiya gaya hai */
+}
+
+/* #container ke i element (heart icon) ki styling */
+#container i {
+    color: red; /* Icon ka color set kiya gaya hai (red) */
+    font-size: 75px; /* Font size set kiya gaya hai (75px) */
+    position: absolute; /* Position set kiya gaya hai absolute */
+    top: 50%; /* Top position set kiya gaya hai center par */
+    left: 50%; /* Left position set kiya gaya hai center par */
+    transform: translate(-50%, -50%) scale(0); /* Transform property se icon ko center par le jaya gaya hai aur initial scale 0 par set ki gayi hai (visibility ke liye) */
+    opacity: 0.8; /* Icon ki opacity set ki gayi hai (0.8) */
+    transition: trnasform ease 0.5s; /* Transition effect set kiya gaya hai (all properties) */
+}
